@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/page_formulaire.css">
+    <title>Formulaire sur la Formation</title>
+</head>
+<body>
+
+    <div class="titre">
+        <h1>SkillSwapSpot</h1>
+    </div>
+
+    <div class="form-container">
+        <form id="main-form">
+            <h2>Formulaire sur la Formation</h2>
+            <label for="nom_ecole">Nom de l'école :</label>
+            <input type="text" id="nom_ecole" name="nom_ecole"><br><br>
+            
+            <label for="secteur_formation">Secteur de la formation :</label>
+            <select id="secteur" name="secteur">
+                <option value="informatique">Informatique</option>
+                <option value="banque">Banque</option>
+                <option value="agricole">Agricole</option>
+                <option value="medecine">Médecine</option>
+              </select><br>
+            
+            <label for="niveaux_etude">Niveaux d'étude :</label>
+            <select id="niveau" name="niveau">
+                <option value="bac">Bac</option>
+                <option value="bax+1">Bac +1</option>
+                <option value="bac+2">Bac +2</option>
+                <option value="bac+3">Bac +3</option>
+                <option value="bac+4">Bac +4</option>
+                <option value="bac+5">Bac +5</option>
+              </select><br>
+            
+            <label for="nom_formation">Nom de la formation :</label>
+            <input type="text" id="nom_formation" name="nom_formation"><br><br>
+            
+            <label for="duree">Durée :</label>
+            <select id="durée" name="durée">
+                <option value="2ans">2 ans</option>
+                <option value="3ans">3 ans</option>
+                <option value="5ans">5 ans</option>
+                <option value="5ans">5 ans et plus</option>
+              </select><br>
+            
+            <label for="cv">Inserez votre CV :</label>
+            <input type="file" id="cv" name="cv"><br><br>
+
+            <div class="rating">
+                <label for="rating">Note de la formation :</label><br>
+                <div id="rating">
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star"></label>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <div class="submit-container">
+        <button id="submit-button">Valider</button>
+    </div>
+    <button class="add-form-button">Ajouter un formulaire</button>
+    <script src="Js/Formulaire.js"></script>
+</body>
+</html>

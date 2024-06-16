@@ -1,5 +1,5 @@
 body {
-    background-color: #ccc;
+    background-color: #7ed957;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -64,3 +64,4 @@ button:hover {
     cursor: pointer;
     color: white;
 }
+

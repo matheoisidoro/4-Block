@@ -17,7 +17,3 @@ window.onclick = function(event) {
     }
 }
 
-function toggleMenu() {
-    const dropdown = document.getElementById('profileDropdown');
-    dropdown.classList.toggle('show');
-}

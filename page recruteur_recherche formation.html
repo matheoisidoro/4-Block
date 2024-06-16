@@ -5,21 +5,55 @@
   <link rel="stylesheet" href="CSS/page recruteur_recherche formation.css">
 </head>
 <body>
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <p>SkillSwapSpot</p>
+    </div>
+
+    <div class="profile-menu">
+        <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" class="profile-icon" onclick="toggleMenu()">
+        <div class="profile-dropdown" id="profileDropdown">
+            <a href="page_de_connexion.html">Se connecter</a>
+            <a href ="page recruteur_Accueil.html">Accueil</a>
+        </div>
+    </div>
   <div class="container">
-    <h1>Interface recruteur</h1>
-    <p>Rechercher une formation pour trouver des profils correspondant</p>
+    <p>Rechercher une formation pour trouver des profils correspondant a vos attente</p>
     <div class="form-group">
-        <label for="nom_formation">Nom de la formation:</label>
-        <input type="text" id="nom_formation" class="form-control" placeholder="Entrez le nom de la formation">
-      </div>
-      <div class="form-group">
-        <label for="secteur">Secteur de la formation:</label>
-        <select id="secteur" class="form-control">
-          <option value="">Sélectionner un secteur</option>
-        </select>
-      </div>
-      <button class="btn" id="searchButton">Rechercher</button>
+      <label for="nom_formation">Nom de la formation:</label>
+      <input type="text" id="nom_formation" class="form-control" placeholder="Entrez le nom de la formation">
+    </div>
+    <div class="form-group">
+      <label for="secteur">Secteur de la formation:</label>
+      <select id="secteur" class="form-control">
+        <option value="">Sélectionner un secteur</option>
+      </select>
+    </div>
+    <button class="btn" id="searchButton">Rechercher</button>
+
+    <div id="resultsContainer">
+      <table class="table" id="resultsTable">
+        <thead>
+          <tr>
+            <th>Prénom</th>
+            <th>École</th>
+            <th>Nom de la formation</th>
+            <th>Niveau d'étude</th>
+            <th>Secteur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Résultats affichés ici -->
+        </tbody>
+      </table>
+    </div>
+    <div id="messageContainer"></div>
+
+    <div class="contact-container">
+        <button class="contact-page-btn" onclick="window.location.href='Formulaire_de_contact.html'">Contacter</button>
+    </div>
     <script src="JS/page recruteur_ recherche formation.js"></script>
+    
   </div>
 </body>
 </html>

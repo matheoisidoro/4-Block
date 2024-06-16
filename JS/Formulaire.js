@@ -1,21 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
+ddocument.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cv').addEventListener('change', function() {
-        var cvInfo = document.getElementById('cv-info');
-        var file = this.files[0];
+        const cvInfo = document.getElementById('cv-info');
+        const file = this.files[0];
         if (file) {
-            cvInfo.innerHTML = '<a href="' + URL.createObjectURL(file) + '" target="_blank">Voir le CV téléchargé : ' + file.name + '</a>';
+            cvInfo.innerHTML = `<a href="${URL.createObjectURL(file)}" target="_blank">Voir le CV téléchargé : ${file.name}</a>`;
         } else {
             cvInfo.innerHTML = '';
         }
     });
 
-    const formContainer = document.querySelector('.form-container'); // Sélectionnez le conteneur du formulaire
-    const addFormButton = document.querySelector('.add-form-button'); // Sélectionnez le bouton "+"
+    const formContainer = document.querySelector('.form-container'); // Sélection du conteneur du formulaire
+    const addFormButton = document.querySelector('.add-form-button'); // Sélection du bouton "+"
 
-    let formCount = 1; // Initialiser le compteur des formulaires
+    let formCount = 1; // Initialisation du compteur de formulaires
 
     addFormButton.addEventListener('click', () => {
-        // Créer un nouveau formulaire
+        // Création d'un nouveau formulaire
         const newForm = document.createElement('div');
         newForm.classList.add('form');
         newForm.innerHTML = `
@@ -61,19 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     <input type="file" id="cv-${formCount}" name="cv-${formCount}">
                 </div>
                 <div class="rating">
-                <label for="rating">Note de la formation :</label><br>
-                <div id="rating">
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-                    <input type="radio" id="star5" name="rating" value="5"><label for="star"></label>
+                    <label for="rating">Note de la formation :</label><br>
+                    <div id="rating">
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                    </div>
                 </div>
-            </div>
             </form>
         `;
 
-        // Ajouter un bouton de suppression au formulaire
+        // Ajout d'un bouton de suppression au formulaire
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Supprimer';
         deleteButton.classList.add('delete-form-button');
@@ -83,10 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         newForm.appendChild(deleteButton);
 
-        // Ajouter le nouveau formulaire au conteneur
+        // Ajout du nouveau formulaire au conteneur
         formContainer.appendChild(newForm);
 
-        formCount++; // Incrémenter le compteur des formulaires
+        formCount++; // Incrémentation du compteur de formulaires
     });
 
     // Ajout d'un écouteur pour le bouton de soumission
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const forms = document.querySelectorAll('.form form');
         const formData = [];
 
-        forms.forEach((form, index) => {
+        forms.forEach((form) => {
             const data = new FormData(form);
             const formObject = {};
             data.forEach((value, key) => {

@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('server.php')
+    fetch('')
         .then(response => response.json())
         .then(formations => {
             const formContainer = document.getElementById('form-container');
 
             if (formations.length > 0) {
                 formations.forEach(formation => {
-                    // Créer les éléments HTML pour chaque formation
                     const formRow1 = document.createElement('div');
                     formRow1.classList.add('form-row');
                     formRow1.innerHTML = `
@@ -64,22 +63,5 @@ window.onclick = function(event) {
     }
 }
 
-// Fonction de déconnexion
-function logout() {
-    // Suppression des informations de session du stockage local
-    localStorage.removeItem('session');
-    sessionStorage.removeItem('session');
-
-    login = 'page_de_connexion.html';
-
-    // Redirection vers la page de connexion
-    window.location.href = 'page_de_connexion.html';
-
-    // Bloquer le retour en arrière
-    window.history.pushState(null, null, 'page_de_connexion.html');
-    window.addEventListener('popstate', function(event) {
-        window.history.pushState(null, null, 'page_de_connexion.html');
-    });
-}
 
 

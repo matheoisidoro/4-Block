@@ -56,7 +56,7 @@ function login(e) {
   // Utilisateur prédéfini
   let predefinedUsername = "matheo";
   let predefinedPassword = "matheo";
-  let predefinedRole = "etudiant"; // Définir le rôle prédéfini ici
+  let predefinedRole = "recruteur"; // Définir le rôle prédéfini ici
 
   // Récupérer les valeurs des champs d'entrée si nécessaire
   // let username = document.querySelector("#loginUsernameInput").value;
@@ -79,7 +79,7 @@ function login(e) {
       } else if (predefinedRole === "professeur") {
         window.location.href = "prof.html";
       } else if (predefinedRole === "recruteur") {
-        window.location.href = "recruteur.html";
+        window.location.href = "page recruteur_Accueil.html";
       } else {
         alert("Rôle inconnu !");
       }

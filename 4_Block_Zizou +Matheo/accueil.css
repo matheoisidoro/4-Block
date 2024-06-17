@@ -1,0 +1,76 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 20px;
+    padding: 10px;
+    height: 10vh;
+}
+
+body {
+    background-image: url(img/DeWatermark.ai_1717358198793.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: brightness(0.7);
+}
+
+
+.loginbouton {
+    border: 3px solid #34252F;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+    padding-inline: 1.5vw;
+    transition: ease-in-out 0.3s;
+    background: #34252F;
+    position: relative;
+    overflow: hidden;
+}
+
+.loginbouton:hover {
+    background: white;
+}
+
+.loginbouton:hover p {
+    color: #34252F;
+}
+
+.loginbouton p {
+    color: white;
+}
+
+.logo {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 8vh;
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    text-align: center;
+    width: 50vw;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 4vw;
+}
+
+main p {
+    color: white;
+    font-size: 1.5vw;
+    width: 50vw;
+    text-align: center;
+    font-family: AvenirNext;
+}

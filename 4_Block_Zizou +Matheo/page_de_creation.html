@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SkillSwapSpot: Création de compte</title>
+    <script src="JS/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/page_de_creation.css">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <header>
+    <div class="logo">
+        <img src="img/logo.png" alt="logo">
+        <p>SkillSwapSpot</p>
+    </div>
+  
+</header>
+  <body>
+    <form action="/submit_account_info" method="post">
+
+      <h2>Crée un compte</h2>
+
+      <form id="signupForm" onsubmit="signup(event, this)">
+      <label for="prénome">Prénom:</label><br>
+      <input type="text" id="prénome" name="prénome"><br>
+      <label for="username">Nom d'utilisateur:</label><br>
+      <input type="text" id="signupUsernameInput" name="username"><br>
+      <label for="password">Mot de passe:</label><br>
+      <input type="password" id="signUpPasswordInput" name="password"><br>
+      <label for="anniversaire">Date de naissance:</label><br>
+      <input type="date" id="anniversaire" name="anniversaire"><br>
+      <label for="sexe">Sexe:</label><br>
+      <select id="sexe" name="sexwe">
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+      </select><br>
+      <label for="status">Status:</label><br>
+      <select id="status" name="status">
+        <option value="etudiant">Etudiant</option>
+        <option value="professeur">Professeur</option>
+        <option value="recruteur">Recruteur</option>
+      </select><br>
+      <label for="email">Adresse e-mail:</label><br>
+      <input type="email" id="email" name="email" placeholder="alber.dalsiva@gmail.com"> <br>
+      <input type="submit" value="Crée le compte">
+      <div class ="connecter">
+        <p><a href="page_de_connexion.html">Se connecter</a></p>
+      </div>
+
+      <script src="JS/login.js"></script>
+      
+    </form>
+  </body>
+</html>

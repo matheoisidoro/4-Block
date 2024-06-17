@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(162, 226, 162);
+}
+
+.liste_formation{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-left: 2vw;
+    font-size:3.5vh;
+}
+.formation{
+    margin:3vh;
+    padding-left: 2vw;
+    
+    
+}
+
+.eleve{
+    margin-top: 2vh;
+    padding-left: 2vw;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.recherche{
+
+padding-right: 2vw;
+padding-top: 6vh;
+
+
+
+
+}
+
+.InterProf{
+
+display:flex;
+align-items: center;
+justify-content: center;
+font-family: kanit;
+font-size: 5vh;
+}
+
+.nom{
+cursor: pointer;
+}

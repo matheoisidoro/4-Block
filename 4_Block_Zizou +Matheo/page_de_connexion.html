@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/page_de_connexion.css">
+    <link rel="stylesheet" href="style.css">
+
+	<title>SkillSwapSpot: Connexion</title>  <!--Titre de la page qui apparaîtra dans l'onglet du navigateur-->
+</head>
+<header>
+    <div class="logo">
+        <img src="img/logo.png" alt="logo">
+        <p>SkillSwapSpot</p>
+    </div>
+    
+  
+
+</header>
+<body>
+    <!--Conteneur pour le formulaire de connexion-->
+    <div class="connexion">
+        <h2>Connexion</h2> 
+        <form id="loginForm">
+            <label for="username">Nom d'utilisateur:</label><br> <!--Étiquette pour le champ du nom d'utilisateur-->
+            <input type="username" id="loginUsernameInput" name="username"><br> <!--Champ de saisie pour le nom d'utilisateur-->
+            <label for="password">Mot de passe:</label><br>
+            <input type="password" id="loginPasswordInput" name="password"><br>
+            <input type="submit" value="Sign in"> <!--Bouton pour se connecter-->
+            <p><a href="page_de_creation.html">Creer un compte</a></p> <!--Lien vers la page de création de compte-->
+        </form>
+    </div>
+
+    <!-- Inclusion du fichier JavaScript -->
+    <script src="JS/login.js"></script> 
+</body>
+</html>

@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(162, 226, 162);
+}
+
+.profil img{
+    
+    height: 10vh;
+    width: 7vw;
+}
+
+.profil{
+    display:flex;
+    justify-content: center;
+    font-family: kanit;
+}
+.prénom{
+    font-family: kanit;
+}
+.formation {
+    display: flex;
+    flex-direction: column; /* Empile les blocs verticalement */
+    gap: 26px; /* Espace entre les blocs */
+    margin: 20px;
+}
+
+.parcours {
+    display: flex;
+    flex-direction: row; /* Aligne les éléments de chaque parcours horizontalement */
+    gap: 20px; /* Espace entre les éléments à l'intérieur de chaque parcours */
+    padding: 10px;
+    border: 1px solid #ccc; /* Bordure pour chaque parcours pour la visibilité */
+    background-color: #f9f9f9; /* Couleur de fond pour différencier chaque bloc */
+}
+
+.info {
+    font-family: AvenirNext;
+    font-size: 2.5vh;
+    margin: 0; /* Supprime le margin par défaut des paragraphes */
+}
+
+.actions {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments actions verticalement */
+    gap: 10px; /* Espace entre le textarea et les boutons */
+    margin-top: 10px; /* Espace entre les informations et les actions */
+}
+
+.comment {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Empêche le redimensionnement */
+}
+.bouton {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les boutons */
+}
+
+.save{
+    display:flex;
+    justify-content: end;
+    height: 5vh;
+    margin-right: 5vh;
+
+}
+.Enregistrer{
+    font-size: 2.5vh;
+    cursor: pointer;
+}

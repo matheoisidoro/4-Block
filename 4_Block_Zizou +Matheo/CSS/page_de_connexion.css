@@ -1,0 +1,80 @@
+body {
+	background-color: #5271FF; /* Applique une couleur de fond de la page */
+	font-family: Arial, sans-serif; /*police de caractères spécifique au corps de la page*/
+	
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	font-size: 20px;
+	padding: 10px;
+	height: 10vh;
+  }
+  
+.titre{
+    text-align: center; /* Centre le texte */
+    padding: 10px;
+    background-color: #ffffff; /* Définit une couleur de fond blanche */
+    color: #000000; /* Définit une couleur de texte noire */
+    
+}
+
+.connexion {
+	width: 300px; /* Définit une largeur du carrée*/
+	margin: 30px auto; /*/* Centre l'élément horizontalement et ajoute une marge*/
+	padding: 20px; /* Ajoute un padding intérieur de 20px */
+	background-color: #fff;
+	border: 1px solid #ccc; /* Ajoute une bordure grise claire */
+	border-radius: 20px; /* Arrondit les coins*/
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /*/* Ajoute une ombre*/
+}
+
+h2{
+    text-align: center;
+}
+
+form {
+	margin-top: 30px; /* Ajoute une marge supérieure de 30px */
+}
+
+label {
+	display: block; /* Affiche les labels comme des blocs */
+	margin-bottom: 5px; /* Ajoute une marge dans le bouton */
+}
+
+input[type="text"], input[type="password"], input[type = "username"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+input[type="submit"] {
+	width: 100%;
+	padding: 10px;
+
+	background-color: #1e61dd;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	justify-content: center; 
+    
+}
+
+input[type="submit"]:hover { 
+	background-color: #5271FF;	 /* Change la couleur de fond au survol */
+} 
+
+p {
+	text-align: right;
+	margin-top: 20px;
+	font-size: 0.8em;
+	color: #1e61dd; /* Définit une couleur de texte bleue */
+	text-decoration: none; /*/* Supprime toute décoration de texte, comme les soulignements */
+}
+
+

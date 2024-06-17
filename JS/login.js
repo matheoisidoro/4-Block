@@ -83,7 +83,7 @@ function login(e) {
       alert("Connexion réussie !");
       // Utiliser le rôle prédéfini ici
       if (predefinedRole === "etudiant") {
-        window.location.href = "Afficher_formation_eleve.html";
+        window.location.href = "Eleve_Afficher_formation.html";
       } else if (predefinedRole === "professeur") {
         window.location.href = "prof.html";
       } else if (predefinedRole === "recruteur") {

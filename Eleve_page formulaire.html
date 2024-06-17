@@ -11,13 +11,13 @@
         <h1>SkillSwapSpot</h1>
     </div>
 
-    <div class="form-container">
-        <form id="main-form">
+    <div class="conteneur-formulaire">
+        <form id="formulaire-principal">
             <h2>Formulaire sur la Formation</h2>
             <label for="nom_ecole">Nom de l'école :</label>
             <input type="text" id="nom_ecole" name="nom_ecole"><br><br>
             
-            <label for="secteur_formation">Secteur de la formation :</label>
+            <label for="secteur">Secteur de la formation :</label>
             <select id="secteur" name="secteur">
                 <option value="informatique">Informatique</option>
                 <option value="banque">Banque</option>
@@ -25,7 +25,7 @@
                 <option value="medecine">Médecine</option>
             </select><br>
             
-            <label for="niveaux_etude">Niveaux d'étude :</label>
+            <label for="niveau">Niveaux d'étude :</label>
             <select id="niveau" name="niveau">
                 <option value="bac">Bac</option>
                 <option value="bax+1">Bac +1</option>
@@ -39,30 +39,31 @@
             <input type="text" id="nom_formation" name="nom_formation"><br><br>
             
             <label for="duree">Durée :</label>
-            <select id="durée" name="durée">
+            <select id="duree" name="duree">
                 <option value="2ans">2 ans</option>
                 <option value="3ans">3 ans</option>
                 <option value="5ans">5 ans</option>
-                <option value="5ans">5 ans et plus</option>
+                <option value="5ansplus">5 ans et plus</option>
             </select><br>
             
-            <div class="rating">
-                <label for="rating">Note de la formation :</label><br>
-                <div id="rating">
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-                    <input type="radio" id="star5" name="rating" value="5"><label for="star"></label>
+            <div class="notation">
+                <label for="notation">Note de la formation :</label><br>
+                <div id="notation">
+                    <input type="radio" id="star1" name="notation" value="1"><label for="star1"></label>
+                    <input type="radio" id="star2" name="notation" value="2"><label for="star2"></label>
+                    <input type="radio" id="star3" name="notation" value="3"><label for="star3"></label>
+                    <input type="radio" id="star4" name="notation" value="4"><label for="star4"></label>
+                    <input type="radio" id="star5" name="notation" value="5"><label for="star5"></label>
                 </div>
             </div>
             
         </form>
     </div>
-    <div class="submit-container">
-        <button id="submit-button">Valider</button>
+    <div class="conteneur-soumission">
+        <button id="bouton-valider">Valider</button>
     </div>
-    <button class="add-form-button">Ajouter un formulaire</button>
+    <button class="ajouter-formulaire-bouton">Ajouter un formulaire</button>
     <script src="Js/Formulaire.js"></script>
 </body>
 </html>
+

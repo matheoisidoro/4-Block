@@ -54,9 +54,17 @@ function login(e) {
   e.preventDefault();
 
   // Utilisateur prédéfini
-  let predefinedUsername = "matheo";
-  let predefinedPassword = "matheo";
-  let predefinedRole = "recruteur"; // Définir le rôle prédéfini ici
+  /*let predefinedUsername = "recruteur";
+  let predefinedPassword = "recruteur";
+  let predefinedRole = "recruteur"; */
+
+ /* let predefinedUsername = "prof";
+  let predefinedPassword = "prof";
+  let predefinedRole = "professeur"; */
+
+  let predefinedUsername = "etudiant";
+  let predefinedPassword = "etudiant";
+  let predefinedRole = "etudiant"; 
 
   // Récupérer les valeurs des champs d'entrée si nécessaire
   // let username = document.querySelector("#loginUsernameInput").value;
@@ -100,14 +108,12 @@ document.querySelector("#loginForm").addEventListener("submit", login);
 /*function login(e) {
   e.preventDefault();
 
-  // Utilisateur prédéfini
-  let predefinedUsername = "matheo";
-  let predefinedPassword = "matheo";
+   let username = document.querySelector("#signupUsernameInput").value;
+  let password = document.querySelector("#signUpPasswordInput").value;
 
   let data = {
-    username: predefinedUsername,
-    password: predefinedPassword,
-    role: "etudiant" // Définir le rôle directement ici
+    username: username, // Ici le username saisi par l'utilisateur
+    password: password, // Ici le mot de passe saisi par l'utilisateur
   };
 
   // Simuler une requête de connexion (remplacer par fetch ou axios selon vos besoins)
@@ -129,7 +135,7 @@ document.querySelector("#loginForm").addEventListener("submit", login);
       } else if (data.role === "professeur") {
         window.location.href = "prof.html";
       } else if (data.role === "recruteur") {
-        window.location.href = "recruteur.html";
+        window.location.href = "page recruteur_Accueil.html";
       } else {
         alert("Rôle inconnu !");
       }

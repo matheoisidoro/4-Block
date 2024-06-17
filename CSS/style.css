@@ -1,0 +1,51 @@
+@font-face {
+    font-family: rifton;
+    src: url(font/rifton-regular.otf);
+}
+
+@font-face {
+    font-family: AvenirNext;
+    src: url(font/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: Serif4;
+    src: url(font/SourceSerif4-VariableFont_opsz\,wght.ttf)
+}
+
+@font-face {
+    font-family: Kanit;
+    src: url(font/Kanit-Regular.ttf)
+}
+
+* {
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: rifton;
+}
+
+
+body {
+    height: 100vh;
+}
+
+.logo {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 8vh;
+}
+.profil {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+
+}
+.profil img{
+    height: 7vh;
+}

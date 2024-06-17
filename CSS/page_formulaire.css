@@ -47,14 +47,6 @@ select {
   box-sizing: border-box;
 }
 
-input[type="file"] {
-  width: 100%;
-  margin-top: 5px;
-  box-sizing: border-box;
-  border: none;
-  padding: 0;
-}
-
 .submit-container {
   display: flex;
   justify-content: center;
@@ -79,11 +71,6 @@ br {
   margin-bottom: 10px;
 }
 
-#cv-info {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
 .add-form-button {
   display: block;
   margin: 20px auto;
@@ -99,6 +86,7 @@ br {
 .add-form-button:hover {
   background-color: #0056b3;
 }
+
 .delete-form-button {
   background-color: red; /* Couleur de fond rouge */
   color: white; /* Couleur du texte blanche */

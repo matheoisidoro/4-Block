@@ -1,21 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('cv').addEventListener('change', function() {
-        var cvInfo = document.getElementById('cv-info');
-        var file = this.files[0];
-        if (file) {
-            cvInfo.innerHTML = '<a href="' + URL.createObjectURL(file) + '" target="_blank">Voir le CV téléchargé : ' + file.name + '</a>';
-        } else {
-            cvInfo.innerHTML = '';
-        }
-    });
-
-    const formContainer = document.querySelector('.form-container'); // Sélectionnez le conteneur du formulaire
-    const addFormButton = document.querySelector('.add-form-button'); // Sélectionnez le bouton "+"
-
-    let formCount = 1; // Initialiser le compteur des formulaires
+    const formContainer = document.querySelector('.form-container');
+    const addFormButton = document.querySelector('.add-form-button');
+    let formCount = 1;
 
     addFormButton.addEventListener('click', () => {
-        // Créer un nouveau formulaire
         const newForm = document.createElement('div');
         newForm.classList.add('form');
         newForm.innerHTML = `
@@ -23,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>Formulaire sur la Formation</h2>
                 <div class="form-row">
                     <label for="nom-ecole-${formCount}">Nom de l'école:</label>
-                    <input type="text" id="nom-ecole-${formCount}" name="nom-ecole-${formCount}">
+                    <input type="text" id="nom-ecole-${formCount}" name="nom_ecole">
                 </div>
                 <div class="form-row">
                     <label for="secteur-formation-${formCount}">Secteur de la formation:</label>
-                    <select id="secteur-formation-${formCount}" name="secteur-formation-${formCount}">
+                    <select id="secteur-formation-${formCount}" name="secteur">
                         <option value="informatique">Informatique</option>
                         <option value="banque">Banque</option>
                         <option value="agricole">Agricole</option>
@@ -36,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="form-row">
                     <label for="nom-formation-${formCount}">Nom de la formation:</label>
-                    <input type="text" id="nom-formation-${formCount}" name="nom-formation-${formCount}">
+                    <input type="text" id="nom-formation-${formCount}" name="nom_formation">
                 </div>
                 <div class="form-row">
                     <label for="niveau-etude-${formCount}">Niveau d'étude:</label>
-                    <select id="niveau-etude-${formCount}" name="niveau-etude-${formCount}">
+                    <select id="niveau-etude-${formCount}" name="niveau">
                         <option value="bac">Bac</option>
                         <option value="bac+2">Bac+2</option>
                         <option value="bac+3">Bac+3</option>
@@ -49,31 +37,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="form-row">
                     <label for="duree-${formCount}">Durée:</label>
-                    <select id="duree-${formCount}" name="duree-${formCount}">
+                    <select id="duree-${formCount}" name="duree">
                         <option value="2ans">2 ans</option>
                         <option value="3ans">3 ans</option>
                         <option value="5ans">5 ans</option>
                         <option value="5ans">5 ans et plus</option>
                     </select>
                 </div>
-                <div class="form-row">
-                    <label for="cv-${formCount}">Insérez votre CV :</label>
-                    <input type="file" id="cv-${formCount}" name="cv-${formCount}">
-                </div>
                 <div class="rating">
                 <label for="rating">Note de la formation :</label><br>
                 <div id="rating">
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-                    <input type="radio" id="star5" name="rating" value="5"><label for="star"></label>
+                    <input type="radio" id="star1-${formCount}" name="rating" value="1"><label for="star1-${formCount}"></label>
+                    <input type="radio" id="star2-${formCount}" name="rating" value="2"><label for="star2-${formCount}"></label>
+                    <input type="radio" id="star3-${formCount}" name="rating" value="3"><label for="star3-${formCount}"></label>
+                    <input type="radio" id="star4-${formCount}" name="rating" value="4"><label for="star4-${formCount}"></label>
+                    <input type="radio" id="star5-${formCount}" name="rating" value="5"><label for="star5-${formCount}"></label>
                 </div>
             </div>
             </form>
         `;
 
-        // Ajouter un bouton de suppression au formulaire
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Supprimer';
         deleteButton.classList.add('delete-form-button');
@@ -83,18 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         newForm.appendChild(deleteButton);
 
-        // Ajouter le nouveau formulaire au conteneur
         formContainer.appendChild(newForm);
-
-        formCount++; // Incrémenter le compteur des formulaires
+        formCount++;
     });
 
-    // Ajout d'un écouteur pour le bouton de soumission
     document.getElementById('submit-button').addEventListener('click', () => {
         const forms = document.querySelectorAll('.form form');
         const formData = [];
 
-        forms.forEach((form, index) => {
+        forms.forEach((form) => {
             const data = new FormData(form);
             const formObject = {};
             data.forEach((value, key) => {
@@ -103,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.push(formObject);
         });
 
-        fetch('/submit-forms', {
+        fetch('submit.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -119,3 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+

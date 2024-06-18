@@ -96,10 +96,6 @@ br {
   margin-bottom: 10px;
 }
 
-#cv-info {
-  margin-top: 10px;
-  font-size: 14px;
-}
 
 .add-form-button {
   display: block;
@@ -154,29 +150,6 @@ br {
   align-items: center;
 }
 
-#rating {
-  display: flex;
-  align-items: center;
-}
-
-#rating input[type="radio"] {
-  display: none;
-}
-
-#rating label {
-  cursor: pointer;
-  font-size: 24px;
-  color: #ccc;
-  margin: 0 2px;
-}
-
-#rating label:before {
-  content: '\2605';
-}
-
-#rating input[type="radio"]:checked~label {
-  color: #f9bf3b;
-}
 
 textarea {
   display: flex;

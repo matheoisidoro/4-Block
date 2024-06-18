@@ -21,28 +21,22 @@ window.onclick = function(event) {
 
 // Affichage des données predefini dans la page HTML 
 document.addEventListener('DOMContentLoaded', function () {
-    // Données statiques des formations avec les notes
+    // Données statiques des formations
     const formations = [
         {
             id: 1,
-            ecole: 'École A',
-            nom_formation: 'Formation A',
-            secteur: 'Secteur A',
-            note: 4  // Note de la formation
+            intitule: 'Formation A',
+            tag: 'Secteur A'
         },
         {
             id: 2,
-            ecole: 'École B',
-            nom_formation: 'Formation B',
-            secteur: 'Secteur B',
-            note: 3  // Note de la formation
+            intitule: 'Formation B',
+            tag: 'Secteur B'
         },
         {
             id: 3,
-            ecole: 'École C',
-            nom_formation: 'Formation C',
-            secteur: 'Secteur C',
-            note: 5  // Note de la formation
+            intitule: 'Formation C',
+            tag: 'Secteur C'
         }
     ];
 
@@ -54,12 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
             formRow.classList.add('form-row');
             formRow.innerHTML = `
                 <div class="formation-info">
-                    <input type='text' class='form-input' value='${formation.ecole}' readonly>
-                    <input type='text' class='form-input' value='${formation.nom_formation}' readonly>
-                    <input type='text' class='form-input' value='${formation.secteur}' readonly>
-                </div>
-                <div class='rating'>
-                    ${getStarsHTML(formation.note)}
+                    <input type='text' class='form-input' value='${formation.intitule}' readonly>
+                    <input type='text' class='form-input' value='${formation.tag}' readonly>
                 </div>
             `;
 
@@ -70,30 +60,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Fonction pour générer le code HTML des étoiles dorées en fonction de la note
-function getStarsHTML(note) {
-    const starCount = 5;
-    let starsHTML = '';
 
-    for (let i = 1; i <= starCount; i++) {
-        if (i <= note) {
-            starsHTML += `<label class='star'>&#9733;</label>`; // Étoile dorée pleine
-        } else {
-            starsHTML += `<label class='star'>&#9734;</label>`; // Étoile dorée vide
-        }
-    }
+/*
+////////////////////// affichage formation avec base de donnes///////////// 
 
-    return starsHTML;
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const formContainer = document.getElementById('form-container');
 
-// affichage formation avec base de donnes 
-/*document.addEventListener('DOMContentLoaded', function () {
-    // Récupérer les données des formations spécifiques à l'utilisateur (exemple de données)
-    fetch('https://api.monserveur.com/formations-utilisateur', {
+    // Récupérer les données des formations spécifiques à l'utilisateur
+    fetch('get_formations.php', {
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer votre_token_jwt'
-            // Ajoutez d'autres en-têtes si nécessaire
+            'Content-Type': 'application/json'
         }
     })
     .then(response => {
@@ -103,20 +81,14 @@ function getStarsHTML(note) {
         return response.json();
     })
     .then(formations => {
-        const formContainer = document.getElementById('form-container');
-
         if (formations.length > 0) {
             formations.forEach(formation => {
                 const formRow = document.createElement('div');
                 formRow.classList.add('form-row');
                 formRow.innerHTML = `
                     <div class="formation-info">
-                        <input type='text' class='form-input' value='${formation.ecole}' readonly>
-                        <input type='text' class='form-input' value='${formation.nom_formation}' readonly>
-                        <input type='text' class='form-input' value='${formation.secteur}' readonly>
-                    </div>
-                    <div class='rating'>
-                        ${getStarsHTML(formation.note)}
+                        <input type='text' class='form-input' value='${formation.intitule}' readonly>
+                        <input type='text' class='form-input' value='${formation.tag}' readonly>
                     </div>
                 `;
 
@@ -128,23 +100,7 @@ function getStarsHTML(note) {
     })
     .catch(error => {
         console.error('Erreur lors de la récupération des données des formations :', error);
-        const formContainer = document.getElementById('form-container');
         formContainer.innerHTML = "Erreur lors de la récupération des données des formations.";
     });
 });
-
-// Fonction pour générer le code HTML des étoiles dorées en fonction de la note
-function getStarsHTML(note) {
-    const starCount = 5;
-    let starsHTML = '';
-
-    for (let i = 1; i <= starCount; i++) {
-        if (i <= note) {
-            starsHTML += `<label class='star'>&#9733;</label>`; // Étoile dorée pleine
-        } else {
-            starsHTML += `<label class='star'>&#9734;</label>`; // Étoile dorée vide
-        }
-    }
-
-    return starsHTML;
-}*/
+*/

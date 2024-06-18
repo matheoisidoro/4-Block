@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const foundFormation = formationsData.formations.find(f => f.nom_formation.toLowerCase().includes(formationName) && f.secteur_id == secteurId);
 
     if (!foundFormation) {
-      document.getElementById('messageContainer').textContent = 'Aucune formation trouvée pour les critères spécifiés.';
+      document.getElementById('messageContainer').textContent = 'Aucune formation trouvée pour les critères spécifiés. Il manque peut être le secteur';
       document.querySelector('#resultsTable tbody').innerHTML = ''; // Effacer les résultats précédents
       return;
     }
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Simuler les profils correspondant à la formation et au secteur sélectionnés
     const profilsData = {
       profils: [
-        { id: 1, prenom: 'Jean', ecole: 'Université A', nom_formation: 'Développeur Web', niveau_etude: 'Bac+5', secteur_id: 1, email: 'jean@example.com' },
+        { id: 1, prenom: 'Jean', ecole: 'Université A', nom_formation: 'Développeur Web', niveau_etude: 'Bac+5', secteur_id: 1, email: 'isidoro.matheo@gmail.com' },
         { id: 2, prenom: 'Marie', ecole: 'Université B', nom_formation: 'Analyste financier', niveau_etude: 'Bac+4', secteur_id: 2, email: 'marie@example.com' },
         { id: 3, prenom: 'Pierre', ecole: 'Université C', nom_formation: 'Chef de produit', niveau_etude: 'Bac+5', secteur_id: 3, email: 'pierre@example.com' },
         // Ajoutez d'autres profils si nécessaire

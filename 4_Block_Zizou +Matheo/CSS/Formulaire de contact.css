@@ -1,75 +1,160 @@
 body {
-    background-color: #7ed957;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7ed957;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 20px;
+    padding: 10px;
+    height: 10vh;
+  }
+  
+  .titre {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  h2 {
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+  }
+  
+  form {
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    display: block;
+    margin-top: 20px;
+    color: #000000;
+  }
+  
+  input[type="text"],
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="file"] {
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+  }
+  
+  .submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #submit-button {
+    background-color: green; /* Couleur de fond verte */
+    color: white; /* Couleur du texte blanche */
+    border: none; /* Supprime la bordure par défaut */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Change le curseur pour pointer */
+    border-radius: 5px; /* Coins arrondis */
+  }
+  
+  #submit-button:hover {
+    background-color: darkgreen; /* Couleur de fond lors du survol */
+  }
+  
+  br {
+    margin-bottom: 10px;
+  }
+  
+  #cv-info {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .add-form-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-form-button:hover {
+    background-color: #0056b3;
+  }
+  .delete-form-button {
+    background-color: red; /* Couleur de fond rouge */
+    color: white; /* Couleur du texte blanche */
+    border: none; /* Supprime la bordure par défaut */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Change le curseur pour pointer */
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 20px;
+    align-self: flex-end; /* Aligne le bouton à droite */
+  }
+  
+  .delete-form-button:hover {
+    background-color: darkred; /* Couleur de fond lors du survol */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-	font-size: 20px;
-	padding: 10px;
-	height: 10vh;
   }
   
-.container {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 350px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.form-buttons {
+  #rating {
     display: flex;
-    justify-content: space-between;
-}
-
-.home-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    align-items: center;
+  }
+  
+  #rating input[type="radio"] {
+    display: none;
+  }
+  
+  #rating label {
     cursor: pointer;
-    color: white;
-}
-
+    font-size: 24px;
+    color: #ccc;
+    margin: 0 2px;
+  }
+  
+  #rating label:before {
+    content: '\2605';
+  }
+  
+  #rating input[type="radio"]:checked ~ label {
+    color: #f9bf3b;
+  }

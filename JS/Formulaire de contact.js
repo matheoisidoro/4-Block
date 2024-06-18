@@ -1,19 +1,7 @@
-// Fonction pour basculer l'affichage du menu déroulant
-function toggleMenu() {
-    const dropdown = document.getElementById('profileDropdown');
-    dropdown.classList.toggle('show');
-}
+function sendMail() {
+    var objet = document.getElementById('objet').value
+    var mailtext = document.getElementById('message').value
+    window.location.href = 'mailto:zizouosmane3@gmail.com?subject=' + objet + '&body=' + mailtext;
+};
 
-// Fermer le menu déroulant si l'utilisateur clique en dehors
-window.onclick = function(event) {
-    if (!event.target.matches('.profile-icon')) {
-        const dropdowns = document.getElementsByClassName('profile-dropdown');
-        for (let i = 0; i < dropdowns.length; i++) {
-            const openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
 

@@ -1,9 +1,9 @@
 /* Réinitialisation des styles de base */
 body {
-  font-family: Arial, sans-serif; /* Utilisation de la police Arial ou une police sans-serif par défaut */
-  margin: 0; /* Pas de marge extérieure */
-  padding: 0; /* Pas de remplissage extérieur */
-  background-color: #ccc; /* Couleur de fond gris clair */
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  background-color: #ccc; 
 }
 header {
   display: flex;
@@ -13,52 +13,49 @@ header {
   padding: 10px;
   height: 10vh;
 }
-
+header .logo, header .profil {
+  display: flex;
+  align-items: center;
+}
+header .logo p {
+  margin-left: 10px;
+}
 .titre {
-  text-align: center; /* Centrage du texte */
-  padding: 10px; /* Remplissage intérieur de 10px */
-  background-color: #ffffff; /* Fond blanc */
-  color: #000000; /* Texte noir */
+  text-align: center; 
+  padding: 10px; 
+  background-color: #ffffff; 
+  color: #000000; 
 }
-
 h2 {
-  text-align: center; /* Centrage du texte */
-  padding: 20px; /* Remplissage intérieur de 20px */
-  color: #000000; /* Texte noir */
+  text-align: center; 
+  padding: 20px; 
+  color: #000000; 
 }
-
-/* Styles pour le formulaire */
 form {
-  width: 300px; /* Largeur fixe de 300px */
-  margin: 30px auto; /* Marge extérieure de 30px en haut et en bas, centré horizontalement */
-  padding: 20px; /* Remplissage intérieur de 20px */
-  background-color: #ffffff; /* Fond blanc */
-  border: 1px solid #ccc; /* Bordure grise de 1px avec couleur #ccc */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  border-radius: 10px; /* Coins arrondis de 10px */
-  display: flex; /* Utilisation de flexbox pour le positionnement des éléments enfants */
-  flex-direction: column; /* Disposition des éléments en colonne */
+  width: 300px; 
+  margin: 30px auto; 
+  padding: 20px; 
+  background-color: #ffffff; 
+  border: 1px solid #ccc; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+  display: flex; 
+  flex-direction: column; 
 }
-
-/* Styles pour les libellés */
 label {
-  display: block; /* Affichage en bloc pour occuper toute la largeur disponible */
-  margin-top: 20px; /* Marge supérieure de 20px */
-  color: #000000; /* Texte noir */
+  display: block; 
+  margin-top: 20px; 
+  color: #000000; 
 }
-
-/* Styles pour les champs de texte et les menus déroulants */
 input[type="text"],
 select {
-  width: 100%; /* Largeur de 100% pour occuper toute la largeur du conteneur */
-  padding: 10px; /* Remplissage intérieur de 10px */
-  margin-top: 5px; /* Marge supérieure de 5px */
-  border: 1px solid #ccc; /* Bordure grise de 1px avec couleur #ccc */
-  border-radius: 5px; /* Coins arrondis de 5px */
-  box-sizing: border-box; /* Boîte de modèle de bordure, inclut la bordure et le rembourrage dans la largeur et la hauteur */
+  width: 100%; 
+  padding: 10px; 
+  margin-top: 5px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
 }
-
-
 input[type="file"] {
   width: 100%;
   margin-top: 5px;
@@ -66,101 +63,58 @@ input[type="file"] {
   border: none;
   padding: 0;
 }
-
-/* Styles pour le conteneur de soumission (boutons) */
 .conteneur-soumission {
-  display: flex; /* Utilisation de flexbox */
-  justify-content: center; /* Centrage horizontal des éléments enfants */
-  margin-top: 20px; /* Marge supérieure de 20px */
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px; 
 }
-
-/* Styles pour le bouton de validation */
 #bouton-valider {
-  background-color: green; /* Fond vert */
-  color: white; /* Texte blanc */
-  border: none; /* Pas de bordure */
-  padding: 10px 20px; /* Remplissage intérieur de 10px en haut/bas et 20px à gauche/droite */
-  font-size: 16px; /* Taille de police 16px */
-  cursor: pointer; /* Curseur pointeur au survol */
-  border-radius: 5px; /* Coins arrondis de 5px */
+  background-color: green; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
 }
-
 #bouton-valider:hover {
-  background-color: darkgreen; /* Fond vert foncé au survol */
+  background-color: darkgreen; 
 }
-
-/* Espacement entre les éléments */
 br {
-  margin-bottom: 10px; /* Marge inférieure de 10px */
+  margin-bottom: 10px; 
 }
-
-/* Styles pour le bouton d'ajout de formulaire */
 .ajouter-formulaire-bouton {
-  display: block; /* Affichage en bloc pour occuper toute la largeur disponible */
-  margin: 20px auto; /* Marge extérieure de 20px en haut/bas, centré horizontalement */
-  padding: 10px 20px; /* Remplissage intérieur de 10px en haut/bas et 20px à gauche/droite */
-  background-color: #007bff; /* Fond bleu */
-  color: #ffffff; /* Texte blanc */
-  border: none; /* Pas de bordure */
-  border-radius: 5px; /* Coins arrondis de 5px */
-  cursor: pointer; /* Curseur pointeur au survol */
-  font-size: 16px; /* Taille de police 16px */
+  display: block; 
+  margin: 20px auto; 
+  padding: 10px 20px; 
+  background-color: #007bff; 
+  color: #ffffff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
 }
-
 .ajouter-formulaire-bouton:hover {
-  background-color: #0056b3; /* Fond bleu foncé au survol */
+  background-color: #0056b3; 
 }
-
-/* Styles pour le bouton de suppression de formulaire */
 .supprimer-formulaire-bouton {
-  background-color: red; /* Fond rouge */
-  color: white; /* Texte blanc */
-  border: none; /* Pas de bordure */
-  padding: 10px 20px; /* Remplissage intérieur de 10px en haut/bas et 20px à gauche/droite */
-  font-size: 16px; /* Taille de police 16px */
-  cursor: pointer; /* Curseur pointeur au survol */
-  border-radius: 5px; /* Coins arrondis de 5px */
-  margin-top: 20px; /* Marge supérieure de 20px */
-  align-self: right; /* Alignement à droite */
+  background-color: red; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  margin-top: 20px; 
 }
-
 .supprimer-formulaire-bouton:hover {
-  background-color: darkred; /* Fond rouge foncé au survol */
+  background-color: darkred; 
 }
-
-/* Styles pour la notation */
-.notation {
-  display: flex; /* Utilisation de flexbox */
-  align-items: center; /* Alignement vertical au centre */
-}
-
-#notation input[type="radio"] {
-  display: none; /* Masquer les boutons radio */
-}
-
-#notation label {
-  cursor: pointer; /* Curseur pointeur au survol */
-  font-size: 24px; /* Taille de police 24px */
-  color: #ccc; /* Texte gris clair */
-  margin: 0 2px; /* Marge à gauche/droite de 2px */
-}
-
-#notation label:before {
-  content: '\2605'; /* Caractère étoile */
-}
-
-#notation input[type="radio"]:checked ~ label {
-  color: #f9bf3b; /* Couleur jaune pour l'étoile sélectionnée */
-}
-
-/* Styles pour le formulaire */
 .form {
-  position: relative; /* Position relative pour le positionnement absolu */
+  position: relative; 
 }
-
-/* Styles pour le bouton de suppression de formulaire individuel */
 .delete-form-button {
-  position: right; 
-  bottom: -30px; /* Décalage de 30px vers le bas */
-  right: 10px; /* Décalage de 10px vers la droite */
+  position: absolute; 
+  bottom: -30px; 
+  right: 10px; 
 }
